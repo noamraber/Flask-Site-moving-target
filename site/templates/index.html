@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Target Control Panel</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-top: 50px;
+        }
+        button {
+            font-size: 18px;
+            margin: 10px;
+            padding: 10px 20px;
+        }
+        p {
+            font-size: 18px;
+            color: #666;
+        }
+        span {
+            font-weight: bold;
+            font-size: 24px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Moving Target Control Panel</h1>
+    <button id="button_1" onclick="updateMovement(1)">Move 1</button>
+    <button id="button_2" onclick="updateMovement(2)">Move 2</button>
+    <button id="button_3" onclick="updateMovement(3)">Move 3</button>
+    <button id="button_0" onclick="updateMovement(0)">Stop</button>
+    <p>Type Of Movement: <span id="movement_value">0</span></p>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
